@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MoviesProject.Views.Login.LoginPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="Black"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Image Source="ic_loginBG" />
+                <Grid Padding="10,75,10,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image
+                        Grid.Row="0"
+                        HeightRequest="100"
+                        Source="ic_logo"
+                        WidthRequest="100" />
+                    <StackLayout Grid.Row="1" Padding="0">
+                        <StackLayout>
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="Medium"
+                                Text="Email"
+                                TextColor="White" />
+                            <Frame
+                                Padding="10,0,10,0"
+                                BackgroundColor="#212121"
+                                CornerRadius="10">
+                                <Entry
+                                    BackgroundColor="Transparent"
+                                    FontAttributes="Bold"
+                                    FontSize="Medium"
+                                    Placeholder="email here"
+                                    PlaceholderColor="#A2A2A2"
+                                    TextColor="White" />
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="Medium"
+                                Text="Password"
+                                TextColor="White" />
+                            <Frame
+                                Padding="10,0,10,0"
+                                BackgroundColor="#212121"
+                                CornerRadius="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Entry
+                                        BackgroundColor="Transparent"
+                                        FontAttributes="Bold"
+                                        FontSize="Medium"
+                                        HorizontalOptions="StartAndExpand"
+                                        IsPassword="True"
+                                        Placeholder="password here                   "
+                                        PlaceholderColor="#A2A2A2"
+                                        TextColor="White" />
+                                    <Button
+                                        BackgroundColor="Transparent"
+                                        HorizontalOptions="End"
+                                        Text="FORGOT?"
+                                        TextColor="White" />
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                        <Button
+                            BackgroundColor="#FFBB3B"
+                            CornerRadius="10"
+                            FontAttributes="Bold"
+                            Text="LOGIN"
+                            TextColor="Black" />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Text="ـــــــــــــــــــــــــــ Social Login ـــــــــــــــــــــــــــ"
+                            TextColor="White"
+                            VerticalTextAlignment="Center" />
+                        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                            <Image Source="ic_facebook" />
+                            <Image Source="ic_google" />
+                        </StackLayout>
+                        <Label
+                            HorizontalOptions="Center"
+                            Text="Don't have an account?"
+                            TextColor="#707070" />
+                        <Button
+                            FontAttributes="Bold"
+                            Text="REGISTER"
+                            TextColor="White" />
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
