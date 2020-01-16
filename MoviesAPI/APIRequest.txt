@@ -1,0 +1,12 @@
+Movies Coming Soon DB
+https://localhost:44388/api/MoviesComingSoonDBModels
+Movies In Theaters
+https://localhost:44388/api/MoviesInTheatersModels
+Top Rated Indian 1
+https://localhost:44388/api/TopRatedIndian2Model
+Top Rated Indian 2
+https://localhost:44388/api/TopRatedIndian2Model
+Top Rated Movies 1
+https://localhost:44388/api/TopRatedMovies1Model
+Top Rated Movies 2
+https://localhost:44388/api/TopRatedMovies2Model
