@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MoviesProject.Views.Settings.ThemeSelectionPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:MoviesProject.ViewModels"
+    Title="No title"
+    BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+
+    <ContentPage.Content>
+        <StackLayout Margin="20" VerticalOptions="CenterAndExpand">
+            <Picker
+                Title="Select Theme"
+                SelectedIndexChanged="OnPickerSelectionChanged"
+                Style="{DynamicResource PickerStyle}">
+                <Picker.Items>
+                    <x:String>Light</x:String>
+                    <x:String>Dark</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label
+                x:Name="StatusLabel"
+                HorizontalOptions="Center"
+                Style="{DynamicResource TitleLabelStyle}"
+                Text="Dark theme loaded. Close this page." />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

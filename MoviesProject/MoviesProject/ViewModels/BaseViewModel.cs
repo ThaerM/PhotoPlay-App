@@ -53,5 +53,6 @@ namespace MoviesProject.ViewModels
             changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
+
     }
 }

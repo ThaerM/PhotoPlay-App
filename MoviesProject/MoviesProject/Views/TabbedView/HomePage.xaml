@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MoviesProject.Views.TabbedView.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:VMContorll="clr-namespace:MoviesProject.ViewModels"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ratingcontrols="clr-namespace:MoviesProject.Controls.RatingControls"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <VMContorll:MoviesComingSoonViewModel x:Name="MoviesViewModel" />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <ffimageloading:CachedImage
+                Aspect="Fill"
+                HeightRequest="350"
+                Source="{Binding PosterURLSelection}" />
+            <Label
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource TitleLabelStyle}"
+                Text="{Binding NameSelection}"
+                VerticalOptions="StartAndExpand"
+                VerticalTextAlignment="Center" />
+            <!--  Rating System by five stars  -->
+            <ratingcontrols:RatingSystem Rating="3" />
+            <CollectionView
+                Margin="50,0,0,0"
+                HeightRequest="25"
+                ItemsSource="{Binding MoviesCollection[0]}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        HorizontalItemSpacing="5"
+                        Orientation="Horizontal"
+                        Span="1"
+                        VerticalItemSpacing="0" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal">
+                            <Label
+                                HorizontalTextAlignment="Center"
+                                Style="{StaticResource OverlayTitleLabelStyle}"
+                                Text="{Binding actors}"
+                                VerticalTextAlignment="Center" />
+                            <BoxView BackgroundColor="{StaticResource TertiaryTextColor}" WidthRequest="1" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <CollectionView
+                BackgroundColor="Transparent"
+                ItemSizingStrategy="MeasureAllItems"
+                ItemsSource="{Binding MoviesCollection}"
+                SelectionChanged="CollectionView_SelectionChanged"
+                SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout HorizontalItemSpacing="5" Orientation="Horizontal" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal">
+                            <!--<IndicatorView>
+                                <IndicatorView.Triggers>
+                                    <DataTrigger
+                                        Binding="{Binding Source={x:Reference ImageItem}, Path=IsLoading}"
+                                        TargetType="Image"
+                                        Value="true" />
+                                </IndicatorView.Triggers>
+                            </IndicatorView>-->
+                            <Image
+                                x:Name="ImageItem"
+                                Aspect="AspectFit"
+                                Source="{Binding posterurl}" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

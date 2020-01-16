@@ -1,4 +1,6 @@
-﻿using MoviesProject.Views.Login;
+﻿using MoviesProject.Controls;
+using MoviesProject.Views.Login;
+using MoviesProject.Views.Settings;
 using Xamarin.Forms;
 
 namespace MoviesProject
@@ -9,7 +11,7 @@ namespace MoviesProject
         public App()
         {
             InitializeComponent();
-            MainPage = new LoginPage();
+            MainPage = new NavigationPage(new LoginPage());
 
         }
 

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MoviesProject.Views.Login.RegisterPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:control="clr-namespace:MoviesProject.Controls"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="Black"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid Padding="35,0,35,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="5" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Image
+                Grid.Row="0"
+                Aspect="AspectFit"
+                Source="ic_avater" />
+            <Button
+                Grid.Row="1"
+                Style="{StaticResource TransparentButton}"
+                Text="Add Profile Picture" />
+            <Grid Grid.Row="3" RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0">
+                    <Label
+                        HeightRequest="25"
+                        Style="{StaticResource TitleLabelStyle}"
+                        Text="FIRST NAME" />
+                    <Frame HeightRequest="40" Style="{StaticResource EntryFrame}">
+                        <control:CustomEntry Placeholder="first name here" Style="{StaticResource CustomEntryStyle}" />
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Row="1">
+                    <Label
+                        HeightRequest="25"
+                        Style="{StaticResource TitleLabelStyle}"
+                        Text="LAST NAME" />
+                    <Frame HeightRequest="40" Style="{StaticResource EntryFrame}">
+                        <control:CustomEntry Placeholder="last name here" Style="{StaticResource CustomEntryStyle}" />
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Row="2">
+                    <Label
+                        HeightRequest="25"
+                        Style="{StaticResource TitleLabelStyle}"
+                        Text="EMAIL" />
+                    <Frame HeightRequest="40" Style="{StaticResource EntryFrame}">
+                        <control:CustomEntry Placeholder="email here" Style="{StaticResource CustomEntryStyle}" />
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Row="3">
+                    <Label
+                        HeightRequest="25"
+                        Style="{StaticResource TitleLabelStyle}"
+                        Text="PASSWORD" />
+                    <Frame HeightRequest="40" Style="{StaticResource EntryFrame}">
+                        <control:CustomEntry Placeholder="password here" Style="{StaticResource CustomEntryStyle}" />
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Row="4">
+                    <Label
+                        HeightRequest="25"
+                        Style="{StaticResource TitleLabelStyle}"
+                        Text="CONFIRM PASSWORD" />
+                    <Frame HeightRequest="40" Style="{StaticResource EntryFrame}">
+                        <control:CustomEntry Placeholder="confirm password here" Style="{StaticResource CustomEntryStyle}" />
+                    </Frame>
+                </StackLayout>
+                <Button
+                    Grid.Row="5"
+                    FontSize="Default"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    Text="REGISTER" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

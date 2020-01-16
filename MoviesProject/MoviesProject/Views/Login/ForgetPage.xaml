@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MoviesProject.Views.Login.ForgetPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:control="clr-namespace:MoviesProject.Controls"
+    BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout Padding="35,0,35,0" Spacing="25">
+            <Image Aspect="AspectFit" Source="ic_logo" />
+            <Label
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource TitleLabelStyle}"
+                Text="FORGOT PASSWORD?"
+                TextColor="White" />
+            <Label Style="{StaticResource OverlayTitleLabelStyle}" Text="Enter the email address you used to create your account and we will email you a link to reset your password" />
+            <StackLayout>
+                <Label Style="{StaticResource TitleLabelStyle}" Text="EMAIL" />
+                <Frame HeightRequest="40" Style="{StaticResource EntryFrame}">
+                    <control:CustomEntry Placeholder="email here" Style="{StaticResource CustomEntryStyle}" />
+                </Frame>
+            </StackLayout>
+            <Button Style="{StaticResource PrimaryButtonStyle}" Text="SEND EMAIL" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

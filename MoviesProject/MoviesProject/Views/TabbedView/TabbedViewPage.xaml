@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="MoviesProject.Views.TabbedView.TabbedViewPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:tab="clr-namespace:MoviesProject.Views.TabbedView"
+    android:TabbedPage.BarItemColor="White"
+    android:TabbedPage.BarSelectedItemColor="#FFBB3B"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    NavigationPage.HasNavigationBar="False">
+    <!--  Pages can be added as references or inline  -->
+    <tab:HomePage Title="Movie" IconImageSource="ic_homeTab" />
+    <tab:SearchPage Title="Search" IconImageSource="ic_searchTab" />
+    <tab:DownloadPage Title="Download" IconImageSource="ic_downloadsTab" />
+    <tab:ProfilePage Title="Profile" IconImageSource="ic_profileTab" />
+</TabbedPage>

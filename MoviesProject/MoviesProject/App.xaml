@@ -2,9 +2,94 @@
 <Application
     x:Class="MoviesProject.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
-    <Application.Resources />
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Application.Resources>
+        <ResourceDictionary Source="ThemeResources/DarkTheme.xaml">
+            <!--  Load font awesome brand  -->
+            <OnPlatform x:Key="AwesomeBrand" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="fa-brands-400" />
+                <On Platform="Android" Value="fa-brands-400.ttf#fa-brands-400" />
+            </OnPlatform>
+            <!--  Load font awesome regular  -->
+            <OnPlatform x:Key="AwesomeRegular" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="fa-regular-400" />
+                <On Platform="Android" Value="fa-regular-400.ttf#fa-regular-400" />
+            </OnPlatform>
+            <!--  Load font awesome solid  -->
+            <OnPlatform x:Key="AwesomeSolid" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="fa-solid-400" />
+                <On Platform="Android" Value="fa-solid-400.ttf#fa-solid-400" />
+            </OnPlatform>
+
+
+            <!--  Sets the colors of Navigationbar's (Toolbar's) TextColor and BackGround Color  -->
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{DynamicResource NavigationBarColor}" />
+                <Setter Property="BarTextColor" Value="{DynamicResource SecondaryColor}" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource PageBackgroundColor}" />
+            </Style>
+
+            <!--  Sets the style for Button and you can change the colors by dynamic resource  -->
+            <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <!--  Sets the style for Button and you can change the colors by dynamic resource  -->
+            <Style x:Key="TransparentButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource TransparentColor}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}" />
+            </Style>
+
+            <!--  Sets the style for Picker and you can change the colors by dynamic resource  -->
+            <Style x:Name="PickerStyle" TargetType="Picker">
+                <Setter Property="BackgroundColor" Value="{DynamicResource PirmaryColor}" />
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="TitleColor" Value="{DynamicResource SecondaryTextColor}" />
+            </Style>
+
+            <!--  Sets the style for title Label and you can change the colors by dynamic resource  -->
+            <Style x:Key="TitleLabelStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}" />
+            </Style>
+
+            <!--  Sets the style for overlay Label for read and you can change the colors by dynamic resource  -->
+            <Style x:Key="OverlayTitleLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="17" />
+                <Setter Property="TextColor" Value="{DynamicResource TertiaryTextColor}" />
+            </Style>
+
+            <!--  Sets the style for Frame as design required and you can change the colors by dynamic resource  -->
+            <Style x:Key="EntryFrame" TargetType="Frame">
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource EntryFrameColor}" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="10,0,10,0" />
+            </Style>
+
+            <!--  Sets the style for Entry for signin and signup style and you can change the colors by dynamic resource  -->
+            <Style x:Key="CustomEntryStyle" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="{DynamicResource TransparentColor}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="PlaceholderColor" Value="{DynamicResource TertiaryTextColor}" />
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}" />
+            </Style>
+
+            <!--  Sets the style for BoxView to view line between control and you can change the colors by dynamic resource  -->
+            <Style x:Key="LineBoxView" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="2" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="Color" Value="{DynamicResource TertiaryTextColor}" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

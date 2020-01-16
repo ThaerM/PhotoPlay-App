@@ -3,98 +3,110 @@
     x:Class="MoviesProject.Views.Login.LoginPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:VMBinding="clr-namespace:MoviesProject.ViewModels"
+    xmlns:control="clr-namespace:MoviesProject.Controls"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     BackgroundColor="Black"
+    NavigationPage.HasNavigationBar="False"
     mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <VMBinding:ProfileViewModdel x:Name="LoginVM" />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
             <Grid>
-                <Image Source="ic_loginBG" />
+                <Image
+                    Grid.Row="0"
+                    Source="ic_loginBG"
+                    VerticalOptions="Start" />
                 <Grid Padding="10,75,10,10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="100" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
+
                     <Image
                         Grid.Row="0"
-                        HeightRequest="100"
-                        Source="ic_logo"
-                        WidthRequest="100" />
+                        Aspect="AspectFit"
+                        Source="ic_logo" />
+
                     <StackLayout Grid.Row="1" Padding="0">
                         <StackLayout>
-                            <Label
-                                FontAttributes="Bold"
-                                FontSize="Medium"
-                                Text="Email"
-                                TextColor="White" />
-                            <Frame
-                                Padding="10,0,10,0"
-                                BackgroundColor="#212121"
-                                CornerRadius="10">
-                                <Entry
-                                    BackgroundColor="Transparent"
-                                    FontAttributes="Bold"
-                                    FontSize="Medium"
+                            <Label Style="{StaticResource TitleLabelStyle}" Text="Email" />
+                            <Frame Style="{StaticResource EntryFrame}">
+                                <control:CustomEntry
+                                    x:Name="EmailEntry"
                                     Placeholder="email here"
-                                    PlaceholderColor="#A2A2A2"
-                                    TextColor="White" />
+                                    Style="{StaticResource CustomEntryStyle}"
+                                    Text="{Binding EmailData}" />
                             </Frame>
                         </StackLayout>
+
                         <StackLayout>
-                            <Label
-                                FontAttributes="Bold"
-                                FontSize="Medium"
-                                Text="Password"
-                                TextColor="White" />
-                            <Frame
-                                Padding="10,0,10,0"
-                                BackgroundColor="#212121"
-                                CornerRadius="10">
+                            <Label Style="{StaticResource TitleLabelStyle}" Text="Password" />
+                            <Frame Style="{StaticResource EntryFrame}">
                                 <StackLayout Orientation="Horizontal">
-                                    <Entry
-                                        BackgroundColor="Transparent"
-                                        FontAttributes="Bold"
-                                        FontSize="Medium"
-                                        HorizontalOptions="StartAndExpand"
+                                    <control:CustomEntry
+                                        x:Name="PasswordEntry"
                                         IsPassword="True"
                                         Placeholder="password here                   "
-                                        PlaceholderColor="#A2A2A2"
-                                        TextColor="White" />
+                                        Style="{StaticResource CustomEntryStyle}"
+                                        Text="{Binding Password}" />
                                     <Button
-                                        BackgroundColor="Transparent"
+                                        Clicked="ForgetHandler"
                                         HorizontalOptions="End"
-                                        Text="FORGOT?"
-                                        TextColor="White" />
+                                        Style="{StaticResource TransparentButton}"
+                                        Text="FORGOT?" />
                                 </StackLayout>
                             </Frame>
                         </StackLayout>
+
                         <Button
-                            BackgroundColor="#FFBB3B"
-                            CornerRadius="10"
-                            FontAttributes="Bold"
-                            Text="LOGIN"
-                            TextColor="Black" />
-                        <Label
-                            FontAttributes="Bold"
-                            FontSize="Medium"
-                            HorizontalOptions="FillAndExpand"
-                            HorizontalTextAlignment="Center"
-                            Text="ـــــــــــــــــــــــــــ Social Login ـــــــــــــــــــــــــــ"
-                            TextColor="White"
-                            VerticalTextAlignment="Center" />
-                        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
-                            <Image Source="ic_facebook" />
-                            <Image Source="ic_google" />
+                            Command="{Binding SignInCommand}"
+                            Style="{StaticResource PrimaryButtonStyle}"
+                            Text="LOGIN" />
+                        <ActivityIndicator
+                            IsRunning="{Binding IsLoad}"
+                            IsVisible="{Binding IsLoad}"
+                            Color="{StaticResource PrimaryColor}" />
+                        <StackLayout Padding="0,20,0,20" Orientation="Horizontal">
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <BoxView Style="{StaticResource LineBoxView}" />
+                            </StackLayout>
+                            <Label
+                                Style="{StaticResource TitleLabelStyle}"
+                                Text="Social Login"
+                                VerticalTextAlignment="Center" />
+
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <BoxView Style="{StaticResource LineBoxView}" />
+                            </StackLayout>
+
                         </StackLayout>
-                        <Label
-                            HorizontalOptions="Center"
-                            Text="Don't have an account?"
-                            TextColor="#707070" />
-                        <Button
-                            FontAttributes="Bold"
-                            Text="REGISTER"
-                            TextColor="White" />
+
+                        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                            <ImageButton
+                                BackgroundColor="Transparent"
+                                Clicked="FacebookHandler"
+                                Source="ic_facebook" />
+                            <ImageButton
+                                BackgroundColor="Transparent"
+                                Clicked="GoogleHandler"
+                                Source="ic_google" />
+                        </StackLayout>
+
+                        <StackLayout Padding="0,10,0,0" Spacing="-10">
+                            <Label
+                                HorizontalOptions="Center"
+                                Style="{StaticResource OverlayTitleLabelStyle}"
+                                Text="Don't have an account?" />
+                            <Button
+                                Clicked="RegisterHandler"
+                                Style="{StaticResource TransparentButton}"
+                                Text="REGISTER" />
+                        </StackLayout>
+
                     </StackLayout>
                 </Grid>
             </Grid>
