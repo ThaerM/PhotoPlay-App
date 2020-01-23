@@ -79,6 +79,6 @@ Thanks to [Tasun Prasad](https://www.behance.net/tasunprasad) for [free sample a
 # License
 ``` 
 Copyright 2020 Thaer Mosa
-For any question please let me know 
+You can contact with me on the email for any question
 Thaer.mosa13@gmail.com
 ```
