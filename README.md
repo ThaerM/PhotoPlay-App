@@ -7,6 +7,21 @@ Application to view the last view from database
 # Dark Theme
 <img src="/ScreenShot_Movies/1-Splash_Dark.png" width="15%"> <img src="/ScreenShot_Movies/2-Login_Dark.png" width="15%"> <img src="/ScreenShot_Movies/3-SignUp_Dark.png" width="15%"> <img src="/ScreenShot_Movies/4-ForgetPassword_Dark.png" width="15%"> <img src="/ScreenShot_Movies/5-Home_Dark.png" width="15%"> <img src="/ScreenShot_Movies/6-Cast_Dark.png" width="15%"> <img src="/ScreenShot_Movies/7-Search_Dark.png" width="15%"> <img src="/ScreenShot_Movies/8-Downloads_Dark.png" width="15%"> <img src="/ScreenShot_Movies/9-Profile_Dark.png" width="15%"> <img src="/ScreenShot_Movies/10-MovieDetails_Dark.png" width="15%"> <img src="/ScreenShot_Movies/11-TVShowDetails_Dark.png" width="15%"> 
 
+# Features integrated
+- Language (Arabic, English).
+- Dynamic FlowDirection.
+- Dynmaic Stars view.
+- Themes (Light Theme, Dark Theme).
+
+# Project uses the follwoing patterns and features:
+- XAML UI.
+- Converters.
+- Custome Controls.
+- Data Binding.
+- MVVM.
+- Styles.
+- Animations.
+
 # Third-Party NuGet Pagekages
 - [Xamarin.Essentials.](https://www.nuget.org/packages/Xamarin.Essentials/)
 - [Newtonesoft.Json.](https://www.nuget.org/packages/Newtonsoft.Json/)
