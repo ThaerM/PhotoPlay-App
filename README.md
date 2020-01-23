@@ -1,5 +1,13 @@
-# Movies View-App
-Application to view the last view from database 
+# Movies App
+# Project Overview
+App uses The Movie Database API. You can Create your [Databse](https://github.com/ThaerM/PhotoPlay-App#prepare-the-database) and [API](https://github.com/ThaerM/PhotoPlay-App#Prepare the ASP.NET Core 2 (API)) it's very esay!. When you get it, Just set it the connection string on you application [like this step](https://github.com/ThaerM/PhotoPlay-App#prepare-the-xamarin-project).
+
+# Why This Project
+To become an Xamarin Developer, you must know how to bring particular mobile experiences to life. Specifically, you need to know how to build clean and compelling user interfaces (UIs), fetch data from network services, and optimize the experience for various mobile devices. You will hne these fundamental skills in this project.
+
+By builing this app, you will demonstrate your understanding of the foundational elements of programming for Xamarin Forms, Xamarin Android and IOS.
+Your app will communicate with the Internet and provide a responsive and delightful user experience.
+I Hope this application help you in your life as developer.
 
 # Light Theme
 <img src="/ScreenShot_Movies/1-Splash_Light.png" width="15%"></img> <img src="/ScreenShot_Movies/2-Login_Light.png" width="15%"></img> <img src="/ScreenShot_Movies/3-SignUp_Light.png" width="15%"></img> <img src="/ScreenShot_Movies/4-ForgotPassword_Light.png" width="15%"> <img src="/ScreenShot_Movies/5-Home_Light.png" width="15%"> <img src="/ScreenShot_Movies/6-Cast_light.png" width="15%"> <img src="/ScreenShot_Movies/7-Search_Light.png" width="15%"> <img src="/ScreenShot_Movies/8-Downloads_Light.png" width="15%"> <img src="/ScreenShot_Movies/9-Profile_Light.png" width="15%"> <img src="/ScreenShot_Movies/10-MovieDetails_Light.png" width="15%"> <img src="/ScreenShot_Movies/11-TVShowDetails_Light.png" width="15%"> <img src="/ScreenShot_Movies/" width="15%"> 
@@ -41,7 +49,7 @@ Application to view the last view from database
 2. Open Microsoft SQL Server Managerment Studio.
 3. Open file [MoviesDB.sql](https://github.com/ThaerM/PhotoPlay-App/blob/master/MoviesDB.sql) to create new database and entities for the test.
 
-## Prepare the API
+## Prepare the ASP.NET Core 2 (API)
 1. Open the API soluation [MovieAPI](https://github.com/ThaerM/PhotoPlay-App/tree/master/MoviesAPI).
 2. Change the Connection string from [appsettings.json](https://github.com/ThaerM/PhotoPlay-App/blob/master/MoviesAPI/MoviesAPI/appsettings.json).
 3. For the check API please check [this](https://github.com/ThaerM/PhotoPlay-App/blob/master/MoviesAPI/APIRequest.txt).
