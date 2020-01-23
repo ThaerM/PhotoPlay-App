@@ -1,6 +1,6 @@
 # Movies App
 # Project Overview
-App uses The Movie Database API. You can Create your [Databse](https://github.com/ThaerM/PhotoPlay-App#prepare-the-database) and [API](https://github.com/ThaerM/PhotoPlay-App/blob/master/README.md#prepare-the-aspnet-core-2-api) it's very esay!. When you get it, Just set it the connection string on you application [like this step](https://github.com/ThaerM/PhotoPlay-App#prepare-the-xamarin-project).
+App uses the Database and API. You can Create your [Database](https://github.com/ThaerM/PhotoPlay-App#prepare-the-database) and [API](https://github.com/ThaerM/PhotoPlay-App/blob/master/README.md#prepare-the-aspnet-core-2-api) in very easy way!. When you get it.
 
 # Why This Project
 To become an Xamarin Developer, you must know how to bring particular mobile experiences to life. Specifically, you need to know how to build clean and compelling user interfaces (UIs), fetch data from network services, and optimize the experience for various mobile devices. You will hne these fundamental skills in this project.
