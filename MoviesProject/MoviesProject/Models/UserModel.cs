@@ -1,4 +1,6 @@
-﻿namespace MoviesProject.Models
+﻿using System.Collections.Generic;
+
+namespace MoviesProject.Models
 {
     public class UserModel
     {
@@ -9,4 +11,5 @@
         public string password { get; set; }
 
     }
+   
 }

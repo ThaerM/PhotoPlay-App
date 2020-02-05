@@ -5,13 +5,35 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="clr-namespace:MoviesProject.ViewModels"
     mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <viewModel:MoviesComingSoonViewModel x:Name="MoviesViewViewModel" />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" />
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ListView
+                Margin="10"
+                HasUnevenRows="True"
+                ItemsSource="{Binding MoviesCollection}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" Orientation="Horizontal">
+                                <Image
+                                    Aspect="Fill"
+                                    HeightRequest="75"
+                                    Source="{Binding posterurl}"
+                                    WidthRequest="125" />
+                                <StackLayout VerticalOptions="CenterAndExpand">
+                                    <Label Text="{Binding title}" TextColor="White" />
+                                    <Label Text="{Binding ratings}" TextColor="LightGray" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

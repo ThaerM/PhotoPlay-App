@@ -2,16 +2,60 @@
 <ContentPage
     x:Class="MoviesProject.Views.TabbedView.ProfilePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <ContentPage.Content>
-        <StackLayout>
-            <Label
+        <Grid Padding="10,50,10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Frame
+                Grid.Row="0"
+                Padding="2"
+                BackgroundColor="Transparent"
+                BorderColor="{StaticResource PrimaryColor}"
+                CornerRadius="360"
+                HeightRequest="100"
                 HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" />
-        </StackLayout>
+                IsClippedToBounds="True"
+                WidthRequest="100">
+                <Image Aspect="Fill" Source="ic_avater" />
+            </Frame>
+            <Label
+                Grid.Row="1"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource TitleLabelStyle}"
+                Text="Thaer Mosa" />
+            <Label
+                Grid.Row="2"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource OverlayTitleLabelStyle}"
+                Text="Premium"
+                TextColor="{StaticResource PrimaryColor}" />
+
+            <StackLayout
+                Grid.Row="3"
+                HorizontalOptions="StartAndExpand"
+                Orientation="Horizontal"
+                Spacing="10">
+                <CollectionView x:Name="ImageListView" BackgroundColor="Red">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout
+                                    HorizontalOptions="StartAndExpand"
+                                    Orientation="Horizontal"
+                                    Spacing="10">
+                                    <Image Source="{Binding ImagePage}" />
+                                    <Label Text="{Binding NamePage}" TextColor="White" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

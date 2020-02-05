@@ -8,7 +8,7 @@ using Android.Util;
 
 namespace MoviesProject.Droid
 {
-    [Activity(Theme = "@style/MyTheme.Splash", Icon = "@drawable/ic_logo", MainLauncher = true, NoHistory = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Theme = "@style/MyTheme.Splash", Icon = "@drawable/ic_logo", MainLauncher = true, NoHistory = true, ConfigurationChanges = ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashActivity : AppCompatActivity
     {
         static readonly string TAG = "x:" + typeof(SplashActivity).Name;
