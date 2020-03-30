@@ -90,6 +90,11 @@
                 <Setter Property="Color" Value="{DynamicResource TertiaryTextColor}" />
             </Style>
 
+            <Style x:Key="Tabbed" TargetType="TabbedPage">
+                <Setter Property="BarTextColor" Value="Red" />
+                <Setter Property="BarBackgroundColor" Value="Green" />
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

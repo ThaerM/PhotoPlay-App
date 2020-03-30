@@ -12,10 +12,7 @@ namespace MoviesProject.Views.Login
             InitializeComponent();
             EmailEntry.Completed += (sender, e) => PasswordEntry.Focus();
             PasswordEntry.Completed += (sender, e) => LoginVM.SignInCommand.Execute(null);
-#if DEBUG
-            EmailEntry.Text = "test";
-            PasswordEntry.Text = "123";
-#endif
+
         }
 
 

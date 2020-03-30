@@ -11,11 +11,11 @@
         public string contentRating { get; set; }
         public string duration { get; set; }
         public string releaseDate { get; set; }
-        public int averageRating { get; set; }
+        public string averageRating { get; set; }
         public string originalTitle { get; set; }
         public string storyline { get; set; }
         public string actors { get; set; }
-        public double  imdbRating { get; set; }
+        public string imdbRating { get; set; }
         public string posterurl { get; set; }
     }
 }

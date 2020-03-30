@@ -18,8 +18,7 @@ namespace MoviesAPI.Controllers
         {
             _context = context;
         }
-
-        // GET: api/MoviesComingSoonDBModels
+        // GET: api/moviesComingSoonDB
         [HttpGet]
         public ActionResult<IEnumerable<MoviesComingSoonDB>> GetMoviesComingSoonDBModel()
         {
@@ -34,7 +33,7 @@ namespace MoviesAPI.Controllers
             }
         }
 
-        // GET: api/MoviesComingSoonDBModels/5
+        // GET: api/moviesComingSoonDB/5
         [HttpGet("{id}")]
         public async Task<ActionResult<MoviesComingSoonDB>> GetMoviesComingSoonDBModel(int id)
         {
@@ -48,7 +47,7 @@ namespace MoviesAPI.Controllers
             return moviesComingSoonDBModel;
         }
 
-        // PUT: api/MoviesComingSoonDBModels/5
+        // PUT: api/moviesComingSoonDB/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]

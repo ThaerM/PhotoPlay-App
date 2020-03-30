@@ -37,21 +37,28 @@
 
             <StackLayout
                 Grid.Row="3"
+                Padding="25"
                 HorizontalOptions="StartAndExpand"
                 Orientation="Horizontal"
                 Spacing="10">
-                <CollectionView x:Name="ImageListView" BackgroundColor="Red">
+                <CollectionView
+                    x:Name="ImageListView"
+                    SelectionChanged="SelectHandler"
+                    SelectionMode="Single">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="10" />
+                    </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <ViewCell>
+                            <Grid Padding="10" RowSpacing="10">
                                 <StackLayout
                                     HorizontalOptions="StartAndExpand"
                                     Orientation="Horizontal"
                                     Spacing="10">
                                     <Image Source="{Binding ImagePage}" />
-                                    <Label Text="{Binding NamePage}" TextColor="White" />
+                                    <Label Style="{StaticResource OverlayTitleLabelStyle}" Text="{Binding NamePage}" />
                                 </StackLayout>
-                            </ViewCell>
+                            </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>

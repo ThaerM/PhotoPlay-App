@@ -51,14 +51,16 @@ namespace MoviesAPI.Controllers
                 }
                 else
                 {
-                    _context.profile.Add(new Profile());
+                    user.id = null;
+                    _context.profile.Add(user);
                 }
                 _context.SaveChanges();
                 return Ok(user);
             }
-            catch
+            catch(Exception ex)
             {
-                return NotFound("We have some issue");
+
+                return NotFound("We have some issue"+ex.Message);
             }
         }
     }

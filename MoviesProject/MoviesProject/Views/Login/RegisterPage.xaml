@@ -6,8 +6,12 @@
     xmlns:control="clr-namespace:MoviesProject.Controls"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewMdoel="clr-namespace:MoviesProject.ViewModels"
     BackgroundColor="Black"
     mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <viewMdoel:SignUpViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid Padding="35,0,35,0">
             <Grid.RowDefinitions>
@@ -39,7 +43,10 @@
                         Style="{StaticResource TitleLabelStyle}"
                         Text="FIRST NAME" />
                     <Frame HeightRequest="40" Style="{StaticResource EntryFrame}">
-                        <control:CustomEntry Placeholder="first name here" Style="{StaticResource CustomEntryStyle}" />
+                        <control:CustomEntry
+                            Placeholder="first name here"
+                            Style="{StaticResource CustomEntryStyle}"
+                            Text="{Binding FirstName}" />
                     </Frame>
                 </StackLayout>
                 <StackLayout Grid.Row="1">
@@ -48,7 +55,10 @@
                         Style="{StaticResource TitleLabelStyle}"
                         Text="LAST NAME" />
                     <Frame HeightRequest="40" Style="{StaticResource EntryFrame}">
-                        <control:CustomEntry Placeholder="last name here" Style="{StaticResource CustomEntryStyle}" />
+                        <control:CustomEntry
+                            Placeholder="last name here"
+                            Style="{StaticResource CustomEntryStyle}"
+                            Text="{Binding LastName}" />
                     </Frame>
                 </StackLayout>
                 <StackLayout Grid.Row="2">
@@ -57,7 +67,10 @@
                         Style="{StaticResource TitleLabelStyle}"
                         Text="EMAIL" />
                     <Frame HeightRequest="40" Style="{StaticResource EntryFrame}">
-                        <control:CustomEntry Placeholder="email here" Style="{StaticResource CustomEntryStyle}" />
+                        <control:CustomEntry
+                            Placeholder="email here"
+                            Style="{StaticResource CustomEntryStyle}"
+                            Text="{Binding Email}" />
                     </Frame>
                 </StackLayout>
                 <StackLayout Grid.Row="3">
@@ -66,7 +79,11 @@
                         Style="{StaticResource TitleLabelStyle}"
                         Text="PASSWORD" />
                     <Frame HeightRequest="40" Style="{StaticResource EntryFrame}">
-                        <control:CustomEntry Placeholder="password here" Style="{StaticResource CustomEntryStyle}" />
+                        <control:CustomEntry
+                            IsPassword="True"
+                            Placeholder="password here"
+                            Style="{StaticResource CustomEntryStyle}"
+                            Text="{Binding Password}" />
                     </Frame>
                 </StackLayout>
                 <StackLayout Grid.Row="4">
@@ -75,11 +92,16 @@
                         Style="{StaticResource TitleLabelStyle}"
                         Text="CONFIRM PASSWORD" />
                     <Frame HeightRequest="40" Style="{StaticResource EntryFrame}">
-                        <control:CustomEntry Placeholder="confirm password here" Style="{StaticResource CustomEntryStyle}" />
+                        <control:CustomEntry
+                            IsPassword="True"
+                            Placeholder="confirm password here"
+                            Style="{StaticResource CustomEntryStyle}"
+                            Text="{Binding ConfirmPassword}" />
                     </Frame>
                 </StackLayout>
                 <Button
                     Grid.Row="5"
+                    Command="{Binding SignUpCommand}"
                     FontSize="Default"
                     Style="{StaticResource PrimaryButtonStyle}"
                     Text="REGISTER" />

@@ -18,16 +18,16 @@ namespace MoviesProject.Services
         public static string GET_TopRatedMovies1 = "api/TopRatedMovies1Model";
 
         //GET: api/TopRatedIndian2Model
-        public static string GET_TopRatedIndian = "api/TopRatedIndian";
+        public static string GET_TopRatedIndian = "api/TopRatedIndian2Model";
 
         //GET: api/TopRatedIndian1Model
         public static string GET_TOpRatedIndian1Model = "api/TopRatedIndian1Model";
 
         // GET: api/MoviesInTheatersModels
-        public static string GET_MoviesInTheaters = "api/GetMoviesInTheaters";
+        public static string GET_MoviesInTheaters = "api/MoviesInTheatersModels";
 
         // GET: api/MoviesComingSoonDBModels
-        public static string GET_MoviesComingSoon = "api/GetMoviesComingSoonDBModel";
+        public static string GET_MoviesComingSoon = "api/MoviesComingSoonDBModels";
 
     }
 }

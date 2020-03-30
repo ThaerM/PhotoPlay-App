@@ -43,10 +43,10 @@ namespace MoviesProject.ViewModels
             if (CheckData())
             {
                 IsLoad = true;
-                if (EmailData == "test" && Password == "123")
-                {
-                    Application.Current.MainPage = new NavigationPage(new TabbedViewPage());
-                }
+                //if (EmailData == "test" && Password == "123")
+                //{
+                //    Application.Current.MainPage = new NavigationPage(new TabbedViewPage());
+                //}
 
 
                 //Use to sent get method to API

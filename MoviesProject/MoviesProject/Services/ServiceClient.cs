@@ -20,7 +20,7 @@ namespace MoviesProject.Services
             //Create new instance
             httpClient = new HttpClient(new HttpClientHandler());
             //Sign the base URL on http 
-            httpClient.BaseAddress = new Uri("https://6f429185.ngrok.io", UriKind.Absolute);
+            httpClient.BaseAddress = new Uri("https://985cfb77.ngrok.io", UriKind.Absolute);
             //Type of the request as json
             httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         }
